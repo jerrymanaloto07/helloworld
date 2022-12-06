@@ -1,0 +1,11 @@
+---
+- hosts: local
+  tasks:
+        - name: run ls
+          action: command ls
+          register: Output
+        - name: pwd
+          action: command systemctl status smbd
+          register: Output
+        - name: pwd
+          debug: msg="{{Output.stdout}}"
