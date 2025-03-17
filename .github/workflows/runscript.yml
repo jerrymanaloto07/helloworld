@@ -13,4 +13,4 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run shell script
-        run: ./hello.sh
+        run: echo "Hello world"
