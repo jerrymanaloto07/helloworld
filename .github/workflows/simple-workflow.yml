@@ -1,7 +1,8 @@
 name: Simple Workflow
 
 on:
-  pull:
+  pull_request:
+    
     
 jobs:
   say-hello:
