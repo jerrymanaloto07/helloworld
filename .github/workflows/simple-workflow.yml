@@ -11,5 +11,7 @@ jobs:
 
       - name: Say Hello
         run: echo "Hello, GitHub Actions! Repository is ${{github.repository}}"
+        tree
+        
 
 
