@@ -12,7 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Say Hello
-        run: echo "Hello, pull  requested"
+        run: |
+            echo "Hello, pull  requested"
         
 
 
