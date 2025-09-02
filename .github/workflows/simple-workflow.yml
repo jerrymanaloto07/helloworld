@@ -20,8 +20,8 @@ jobs:
     steps:
       - name: Say Hello
         run: |
-            echo "Hello, manually triggered"
-            echo "token is ${{ github.token }}"
+          echo "Hello, manually triggered"
+          echo "token is ${{ github.token }}"
         
 
 
