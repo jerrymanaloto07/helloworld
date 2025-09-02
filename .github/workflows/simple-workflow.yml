@@ -24,6 +24,11 @@ jobs:
         run: |
           echo "Hello, manually triggered"
           echo "token is ${{ github.token }}"
+      - uses: jerrymanaloto07/helloworld@master
+        with:
+          example-input: "World"
+
+
         
 
 
