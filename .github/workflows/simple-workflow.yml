@@ -1,21 +1,20 @@
 name: Simple Workflow
 
-on: 
+on:
   workflow_dispatch:
     inputs:
       logLevel:
         description: 'Log level'
-        default: 'warning' 
+        default: 'warning'
         type: choice
         options:
-        - info
-        - warning
-        - debug 
+          - info
+          - warning
+          - debug
+
 permissions:
-  contents: read  
-    
-    
-    
+  contents: read
+
 jobs:
   say-hello:
     runs-on: ubuntu-latest
@@ -24,12 +23,8 @@ jobs:
         run: |
           echo "Hello, manually triggered"
           echo "token is ${{ github.token }}"
-       - uses: ./.github/actions/myaction
+
+      - name: Run My Composite Action
+        uses: ./.github/actions/myaction
         with:
           example-input: "World"
-
-
-
-        
-
-
