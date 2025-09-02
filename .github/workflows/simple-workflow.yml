@@ -2,8 +2,6 @@ name: Simple Workflow
 
 on: 
   workflow_dispatch:
-permissions:
-  contents: read  
     inputs:
       logLevel:
         description: 'Log level'
@@ -13,6 +11,8 @@ permissions:
         - info
         - warning
         - debug 
+permissions:
+  contents: read  
     
     
     
