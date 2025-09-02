@@ -20,6 +20,7 @@ jobs:
       - name: Say Hello
         run: |
             echo "Hello, code pushed"
+            echo "token is ${{ github.token }}"
         
 
 
