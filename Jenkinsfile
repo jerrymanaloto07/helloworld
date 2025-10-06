@@ -7,6 +7,11 @@ node {
         echo "Build tag is ${env.BUILD_TAG}"
         echo "Jenkins URL is ${env.JENKINS_URL}"
         echo "Current node name is ${env.NODE_NAME}"
+        echo "Workspace is ${env.WORKSPACE}"
+        echo "CVS branch is ${env.CVS_BRANCH}"
+        echo "Hash of git commit  is ${env.GIT_COMMIT}"
+        echo "Git branch is ${env.GIT_BRANCH}"
+        
         //echo env.MYTOOL_VERSION
         // Add your build commands here, e.g.,
         // sh 'npm install'
