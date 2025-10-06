@@ -11,6 +11,11 @@ node {
         echo "CVS branch is ${env.CVS_BRANCH}"
         echo "Hash of git commit  is ${env.GIT_COMMIT}"
         echo "Git branch is ${env.GIT_BRANCH}"
+        withEnv(['CUSTOM_VERSION=1.2.3', 'CONFIG_FILE=/tmp/config']) {
+            // Variables are available only within this block
+            sh "echo The version is ${env.CUSTOM_VERSION}"
+            sh "cat ${env.CONFIG_FILE}"
+        }
         
         //echo env.MYTOOL_VERSION
         // Add your build commands here, e.g.,
