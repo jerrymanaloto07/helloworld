@@ -1,4 +1,4 @@
-Jonode {
+node {
     stage('Build') {
         echo 'Building...'
         echo "Job name is ${env.JOB_NAME}"
