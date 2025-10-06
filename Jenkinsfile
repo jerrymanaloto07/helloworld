@@ -2,6 +2,11 @@ node {
     stage('Build') {
         echo 'Building...'
         echo "Job name is ${env.JOB_NAME}"
+        echo "Build number is ${env.BUILD_NUMBER}"
+        echo "Build ID is ${env.BUILD_ID}"
+        echo "Build tag is ${env.BUILD_TAG}"
+        echo "Jenkins URL is ${env.JENKINS_URL}"
+        echo "Current node name is ${env.NODE_NAME}"
         //echo env.MYTOOL_VERSION
         // Add your build commands here, e.g.,
         // sh 'npm install'
