@@ -1,7 +1,7 @@
-node {
+Jonode {
     stage('Build') {
         echo 'Building...'
-        echo "env.JOB_NAME"
+        echo "Job name is ${env.JOB_NAME}"
         //echo env.MYTOOL_VERSION
         // Add your build commands here, e.g.,
         // sh 'npm install'
