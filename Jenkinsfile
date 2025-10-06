@@ -1,7 +1,7 @@
 node {
     stage('Build') {
         echo 'Building...'
-        echo env.MYTOOL_VERSION
+        //echo env.MYTOOL_VERSION
         // Add your build commands here, e.g.,
         // sh 'npm install'
     }
