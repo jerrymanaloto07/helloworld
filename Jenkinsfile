@@ -13,7 +13,7 @@ node {
         echo "Git branch is ${env.GIT_BRANCH}"
         withEnv(['CUSTOM_VERSION=1.2.3']) {
             // Variables are available only within this block
-            sh "echo The version is ${env.CUSTOM_VERSION}"
+            echo "The version is ${env.CUSTOM_VERSION}"
         }
         
         //echo env.MYTOOL_VERSION
