@@ -15,7 +15,6 @@ node {
         echo "Current node name is ${env.NODE_NAME}"
         echo "Workspace is ${env.WORKSPACE}"
         echo "Ci is ${env.CI}"
-        echo "JAVA_HOME is ${env.JAVA_HOME}"
         echo "Build number is ${env.BUILD_NUMBER}"
         echo "Build ID is ${env.BUILD_ID}"
         echo "Job name is ${env.JOB_NAME}"
