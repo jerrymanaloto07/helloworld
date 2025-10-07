@@ -69,7 +69,7 @@ node {
     {
         bat '''
             copy hello.sh C:\\temp
-            REM Verify the deployment
+            REM Verify the deployment 
             dir C:\\temp
         '''
     }
