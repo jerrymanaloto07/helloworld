@@ -27,6 +27,7 @@ node {
         echo "Executor Number is ${env.EXECUTOR_NUMBER}"
         echo "Build url is ${env.BUILD_URL}"
         echo "Job url is ${env.JOB_URL}"
+        echo "Current build number is ${currentBuild.number}"
         
         
         
