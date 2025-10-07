@@ -39,6 +39,11 @@ node {
         echo "keepLog is ${currentBuild.keepLog}"
         echo "scm.userRemoteConfigs are ${scm.userRemoteConfigs}"
         echo "scm.branches are ${scm.branches}"
+        def scm_data = checkout scm
+        
+        // Accessing the attributes
+        echo "Commit: ${scm_data.GIT_COMMIT}"
+        echo "Branch: ${scm_data.GIT_BRANCH}"
         
         
         
