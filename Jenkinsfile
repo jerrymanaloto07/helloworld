@@ -34,7 +34,7 @@ node {
         echo "description is ${currentBuild.description}"
         echo "current build id is ${currentBuild.id}"
         echo "duration of the build in milliseconds is ${currentBuild.duration}"
-        echo "absolute url of build index page is ${currentbuild.absoluteUrl}"
+        //echo "absolute url of build index page is ${currentbuild.absoluteUrl}"
         echo "build variables are ${currentBuild.buildVariables}"
         echo "keepLog is ${currentBuild.keepLog}"
         echo "Remote configs are ${scm.userRemoteConfigs}"
