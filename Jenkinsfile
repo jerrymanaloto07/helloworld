@@ -67,7 +67,14 @@ node {
     }
 
     stage('Deploy') {
-        echo 'Deploying...'
+		try
+		{
+        	echo 'Deploying...'
+		}
+		finally
+		{
+			mail to: jerry.manaloto@accenture.com, subject: 'The Pipeline failed :('
+		}
         // Add your deployment commands here, e.g.,
         // sh 'npm run deploy'
     }
