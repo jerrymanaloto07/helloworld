@@ -37,8 +37,8 @@ node {
         //echo "absolute url of build index page is ${currentbuild.absoluteUrl}"
         echo "build variables are ${currentBuild.buildVariables}"
         echo "keepLog is ${currentBuild.keepLog}"
-        echo "Remote configs are ${scm.userRemoteConfigs}"
-        echo "branches are ${scm.branches}"
+        echo "scm.userRemoteConfigs are ${scm.userRemoteConfigs}"
+        echo "scm.branches are ${scm.branches}"
         
         
         
