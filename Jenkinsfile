@@ -1,3 +1,4 @@
+
 node {
     stage('Build') {
         echo 'Building...'
@@ -12,6 +13,13 @@ node {
         echo "Hash of git commit  is ${env.GIT_COMMIT}"
         echo "Git branch is ${env.GIT_BRANCH}"
         echo "Branch name is ${env.BRANCH_NAME}"
+        echo "Is branch primary? ${env.BRANCH_IS_PRIMARY}"
+        echo "Change ID is ${env.CHANGE_ID}"
+        echo "Change url is ${env.CHANGE_URL}"
+        echo "Change title is ${env.CHANGE_TITLE}"
+        echo "Change author is ${env.CHANGE_AUTHOR}"
+        echo "Change author email is ${env.CHANGE_AUTHOR_EMAIL}"
+        
         withEnv(['CUSTOM_VERSION=1.2.3']) {
             // Variables are available only within this block
             echo "The version is ${env.CUSTOM_VERSION}"
