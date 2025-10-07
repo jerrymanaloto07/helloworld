@@ -67,19 +67,7 @@ node {
     }
 
     stage('Deploy') {
-		try
-		{
         	echo 'Deploying...'
-		}
-		finally
-		{
-			script
-			{
-			mail to: 'jerry.manaloto@accenture.com', subject: "Pipeline Failure: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
-                 body: "The Jenkins pipeline ${env.JOB_NAME} #${env.BUILD_NUMBER} failed during the deploy stage.\n" +
-                       "See the full log here: ${env.BUILD_URL}"
-			}
-		}
         // Add your deployment commands here, e.g.,
         // sh 'npm run deploy'
     }
