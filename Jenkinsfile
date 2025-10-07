@@ -1,5 +1,6 @@
 
 node {
+    checkout scm
     stage('Build') {
         echo 'Building...'
         echo "Job name is ${env.JOB_NAME}"
