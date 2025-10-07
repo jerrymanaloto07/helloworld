@@ -28,6 +28,15 @@ node {
         echo "Build url is ${env.BUILD_URL}"
         echo "Job url is ${env.JOB_URL}"
         echo "Current build number is ${currentBuild.number}"
+        echo "Current build result is ${currentBuild.result}"
+        echo "displayName is ${currentBuild.displayName}"
+        echo "projectName is ${currentBuild.projectName}"
+        echo "description is ${currentBuild.description}"
+        echo "current build id is ${currentBuild.id}"
+        echo "duration of the build in milliseconds is ${currentBuild.duration}"
+        echo "absolute url of build index page is ${currentbuild.absoluteUrl}"
+        echo "build variables are ${currentBuild.buildVariables}"
+        echo "keepLog is ${currentBuild.keepLog}"
         
         
         
