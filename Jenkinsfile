@@ -65,7 +65,14 @@ node {
         // Add your build commands here, e.g.,
         // sh 'npm install'
     }
-
+    stage('Deploy to c:\temp')
+    {
+        bat '''
+            copy deploy_file.txt C:\\temp
+            REM Verify the deployment
+            dir C:\\temp
+        '''
+    }
     stage('Test') {
         echo 'Testing...'
         // Add your test commands here, e.g.,
