@@ -1,6 +1,11 @@
+properties([parameters([string(defaultValue: 'Hello', 
+	description: 'How should I greet the world?', 
+	name: 'Greeting')]
+	)])
 
 node {
     stage('Build') {
+        echo "${params.Greeting} World"
         echo 'Building...'
         echo "Job name is ${env.JOB_NAME}"
         echo "Build number is ${env.BUILD_NUMBER}"
