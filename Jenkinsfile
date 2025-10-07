@@ -73,7 +73,10 @@ node {
 		}
 		finally
 		{
-			mail to: jerry.manaloto@accenture.com, subject: 'The Pipeline failed :('
+			script
+			{
+			mail to: 'jerry.manaloto@accenture.com', subject: 'The Pipeline failed :('
+			}
 		}
         // Add your deployment commands here, e.g.,
         // sh 'npm run deploy'
