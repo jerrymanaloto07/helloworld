@@ -42,8 +42,16 @@ node {
         def scm_data = checkout scm
         
         // Accessing the attributes
-        echo "Commit: ${scm_data.GIT_COMMIT}"
-        echo "Branch: ${scm_data.GIT_BRANCH}"
+        echo "SHA-1 hash of git commit: ${scm_data.GIT_COMMIT}"
+        echo "Remote branch being built GIT_BRANCH: ${scm_data.GIT_BRANCH}"
+        echo "GIT_URL is ${scm_data.GIT_URL}"
+        echo "GIT_LOCAL_BRANCH is ${scm_data.GIT_LOCAL_BRANCH}"
+        echo "GIT_PREVIOUS_COMMIT is ${scm_data.GIT_PREVIOUS_COMMIT}"
+        echo "GIT_PREVIOUS_SUCCESSFUL_COMMIT is ${scm_data.GIT_PREVIOUS_SUCCESSFUL_COMMIT}"
+        echo "GIT_COMMITTER_NAME is ${scm_data.GIT_COMMITTER_NAME}"
+        echo "GIT_COMMITTER_EMAIL is ${scm_data.GIT_COMMITTER_EMAIL}"
+        echo "GIT_AUTHOR_NAME is ${scm_data.GIT_AUTHOR_NAME}"
+        echo "GIT_CHECKOUT_DIR is ${scm_data.GIT_CHECKOUT_DIR}"
         
         
         
