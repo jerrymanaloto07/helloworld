@@ -68,7 +68,7 @@ node {
     stage('Deploy to c:\temp')
     {
         bat '''
-            copy deploy_file.txt C:\\temp
+            copy hello.sh C:\\temp
             REM Verify the deployment
             dir C:\\temp
         '''
