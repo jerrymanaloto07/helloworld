@@ -6,7 +6,7 @@ properties([parameters([string(defaultValue: 'Hello',
 node {
     stage('Build') {
         def scm_data = checkout scm
-		if (scm_data.branches?.contains('master'))
+		if (${scm_data.branches}?.contains('master'))
 		{
 			echo "Branch is master"
 		}
