@@ -66,6 +66,7 @@ node {
             copy hello.sh C:\\temp
             REM Verify the deployment 
             dir C:\\temp
+			type c:\\temp\\hello.sh
         '''
     }
     stage('Test') {
