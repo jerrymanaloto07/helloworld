@@ -78,5 +78,19 @@ node {
         	echo 'Deploying...'
         // Add your deployment commands here, e.g.,
         // sh 'npm run deploy'
+		emailext (
+                subject: "${currentBuild.result}: Job ${env.JOB_NAME} - ${env.BUILD_NUMBER}",
+                body: """
+                    Job: ${env.JOB_NAME} (${env.BUILD_NUMBER})
+                    Status: ${currentBuild.result}
+                    See the console output here: ${env.BUILD_URL}
+                """,
+                to: "developer@example.com",
+                // Conditional triggers for different build states
+                // Always send the email, but use different configurations if needed
+                attachmentsPattern: '**/target/*.jar', // Example of attaching build artifacts
+                presendScript: '$DEFAULT_PRESEND_SCRIPT',
+                trigger: 'Always' // Can be 'Failure', 'Success', 'Fixed', etc.
+            )
     }
 }
