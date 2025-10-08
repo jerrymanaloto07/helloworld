@@ -5,6 +5,15 @@ properties([parameters([string(defaultValue: 'Hello',
 
 node {
     stage('Build') {
+        def scm_data = checkout scm
+		if (scm_data.branches == 'master')
+		{
+			echo "Branch is master"
+		}
+		else
+		{
+			echo "Branch is not master"
+		}
         echo "${params.Greeting} World"
         echo 'Building...'
         echo "Job name is ${env.JOB_NAME}"
@@ -31,7 +40,6 @@ node {
         echo "keepLog is ${currentBuild.keepLog}"
         echo "scm.userRemoteConfigs are ${scm.userRemoteConfigs}"
         echo "scm.branches are ${scm.branches}"
-        def scm_data = checkout scm
         
         // Accessing the attributes
         echo "SHA-1 hash of git commit: ${scm_data.GIT_COMMIT}"
