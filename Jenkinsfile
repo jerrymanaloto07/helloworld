@@ -89,8 +89,6 @@ node {
                 // Conditional triggers for different build states
                 // Always send the email, but use different configurations if needed
                 attachmentsPattern: '**/target/*.jar', // Example of attaching build artifacts
-                presendScript: '$DEFAULT_PRESEND_SCRIPT',
-                trigger: 'Always' // Can be 'Failure', 'Success', 'Fixed', etc.
-            )
+                presendScript: '$DEFAULT_PRESEND_SCRIPT'            )
     }
 }
