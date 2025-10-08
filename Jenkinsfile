@@ -80,7 +80,7 @@ node {
         // Add your deployment commands here, e.g.,
         // sh 'npm run deploy'
 		emailext (
-                subject: Job ${env.JOB_NAME} - ${env.BUILD_NUMBER}",
+                subject: "Job ${env.JOB_NAME} - ${env.BUILD_NUMBER}",
                 body: """
                     Job: ${env.JOB_NAME} (${env.BUILD_NUMBER})
                 """,
