@@ -80,11 +80,9 @@ node {
         // Add your deployment commands here, e.g.,
         // sh 'npm run deploy'
 		emailext (
-                subject: "${currentBuild.result}: Job ${env.JOB_NAME} - ${env.BUILD_NUMBER}",
+                subject: Job ${env.JOB_NAME} - ${env.BUILD_NUMBER}",
                 body: """
                     Job: ${env.JOB_NAME} (${env.BUILD_NUMBER})
-                    Status: ${currentBuild.result}
-                    See the console output here: ${env.BUILD_URL}
                 """,
                 to: "developer@example.com",
                 // Conditional triggers for different build states
