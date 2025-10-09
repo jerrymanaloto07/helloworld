@@ -6,6 +6,11 @@ properties([parameters([string(defaultValue: 'Hello',
 node {
     stage('Build') {
         def scm_data = checkout scm
+		echo "Building Pull Request #${env.CHANGE_ID}"
+        echo "Source Branch: ${env.CHANGE_BRANCH}"
+        echo "Target Branch: ${env.CHANGE_TARGET}"
+            
+            // Check out the code for the PR
 		if (scm_data.branches?.contains('master'))
 		{
 			echo "Branch is master"
